@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class Arboles {
 	
+	// Parcial 
+	
 	public static void main (String[] args) {
 		Scanner sc = new Scanner(System.in);
 		ArbolBinario bt = new ArbolBinario();
