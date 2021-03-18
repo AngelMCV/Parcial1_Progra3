@@ -46,15 +46,31 @@ class ArbolBinario {
 
 	public void agregar(Scanner sc) {
 		System.out.println("INGRESE VALOR");
+		int Valor =sc.nextInt();
+		raiz.Nodo1(Valor);
 		//escriba codigo para ingresar
 	}
 	
 	
 	
 	public void mostrar() {
-		//escriba codigo para mostrar
+		 if(raiz==null) {
+		  }
+		  else {
+			  InOrden(raiz);
+		  }
+			//listo uwu
 	}
-}
+		public void InOrden(Nodo nodo) {
+			if (nodo!=null) {
+				InOrden(nodo.getIzq());
+				System.out.println(nodo.value);
+				InOrden(nodo.getDer());
+			}
+		}
+		//listo uwu
+	}
+
 
 class Nodo{
 	//NO MODIFICAR
@@ -90,4 +106,30 @@ class Nodo{
 		this.der = der;
 	}
 	
-}
+public void Nodo1(int Valor){
+		
+		if(Valor<value) {
+			if (izq == null) {
+				izq = new Nodo(Valor);
+			}
+				else {
+					izq.Nodo1(Valor);
+				}
+					
+			
+		}else {
+			if (Valor>value) {
+				if (der == null) {
+					der = new Nodo(Valor);
+				}
+					else {
+						der.Nodo1(Valor);
+					}
+						
+				}
+			}
+		}
+	
+	
+	
+   }
